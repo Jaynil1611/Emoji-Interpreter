@@ -2,35 +2,36 @@
 
 :root {
   --background-color: #134E4A;
-  --hover-color: #18181B;
-  --background-color-click:#115E59;
-  --font-color:white;
+  --border-color: #18181B;
+  --background-color-click: #115E59;
+  --font-color: white;
 }
 
 .App {
   font-family: 'Merienda', cursive;
   text-align: center;
   margin-top: 2%;
+  font-size: large;
 }
 
 body {
   background-color: var(--background-color);
-  color:var(--font-color); 
+  color: var(--font-color);
 }
 
 input {
   font: inherit;
   width: 30%;
-  height: 30px;
+  height: 40px;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
 }
 
- input:focus {
-   outline: none;
-   border-radius: 0.5rem;
-   border-color: var(--hover-color);
- }
+input:focus {
+  outline: none;
+  border-radius: 0.5rem;
+  border-color: var(--border-color);
+}
 
 /* image */
 .image {
@@ -46,6 +47,10 @@ input {
 }
 
 /* list */
+.display-emoji {
+  padding: 1rem;
+}
+
 .list-non-bullet {
   list-style-type: none;
   padding-inline-start: 0px;
@@ -62,6 +67,23 @@ input {
   font-size: 1.5rem;
 }
 
+.list-item-inline-1 {
+  display: inline;
+  padding: 0rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.list-item-inline-1 i {
+  padding-top: 2rem;
+  color: var(--border-color);
+}
+
+.list-item-inline-1 i:hover {
+  color: var(--font-color);
+  transition: all 0.2s ease-in-out;
+}
+
 /* choosen emoji */
 .chosen-style {
   cursor: "pointer";
@@ -76,7 +98,7 @@ input {
   height: 30px;
   margin-top: 20px;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   text-align: center;
   background-color: var(--background-color-click);
   white-space: nowrap;

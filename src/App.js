@@ -72,7 +72,7 @@ export default function App() {
           </div>
         )}
       </div>
-      <div>
+      <div className="display-emoji">
         <br />
         Here are the most used object emoji's used by users around the world
         <ul className="list-non-bullet">
@@ -88,6 +88,39 @@ export default function App() {
               </li>
             );
           })}
+        </ul>
+        <ul className="list-non-bullet">
+          <li className="list-item-inline-1">
+            <a
+              href="https://www.linkedin.com/in/jaynilgaglani/"
+              className="link"
+            >
+              <i className="bx bxl-linkedin bx-sm"></i>
+            </a>
+          </li>
+          <li className="list-item-inline-1">
+            <a href="https://twitter.com/JAYNIL1611" className="link">
+              <i className="bx bxl-twitter bx-sm"></i>
+            </a>
+          </li>
+          <li className="list-item-inline-1">
+            <a href="https://github.com/Jaynil1611" className="link">
+              <i className="bx bxl-github bx-sm"></i>
+            </a>
+          </li>
+          <li className="list-item-inline-1">
+            <a
+              href="https://www.instagram.com/jaynil_gaglani/"
+              className="link"
+            >
+              <i className="bx bxl-instagram bx-sm"></i>
+            </a>
+          </li>
+          <li className="list-item-inline-1">
+            <a href="mailto:g.jaynil2401@gmail.com" className="link">
+              <i className="bx bx-envelope bx-sm"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
