@@ -35,20 +35,19 @@ export default function App() {
     let emoji = event.target.value;
     if (emoji) {
       getMeaningFromEmoji(emoji);
-    } 
-    else {
+    } else {
       setChosenEmojiIndex(-1);
     }
   }
 
   return (
     <div className="App">
-      <img src={Emoji} className="image"></img>
+      <img src={Emoji} className="image" alt="Emoji"></img>
       <div>
         <h1>
           EmojiSearch
           <span>
-            <img src={search} className="search-image"></img>
+            <img src={search} className="search-image" alt="search"></img>
           </span>
         </h1>
       </div>
