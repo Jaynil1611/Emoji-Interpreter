@@ -1,29 +1,32 @@
 import React, { useState } from "react";
 import "./styles.css";
 import { emojiDictionary } from "./emojiDictionary.js";
+import Emoji from "./images/Emoji.png";
+import search from "./images/search.png";
 
 const emojisInDB = Object.keys(emojiDictionary);
 
 const chosenStyle = {
   cursor: "pointer",
-  backgroundColor: "#334155",
+  backgroundColor: "#0F766E",
   borderRadius: "0.5rem"
 };
 
 export default function App() {
-  const [meaning, setMeaning] = useState(
-    "Search for object emoji below or put it above"
-  );
+  const [meaning, setMeaning] = useState(null);
 
   const [chosenEmojiIndex, setChosenEmojiIndex] = useState(-1);
+
+  const [chosenEmoji, setChosenEmoji] = useState(null);
 
   const getMeaningFromEmoji = (emoji, index) => {
     if (emoji in emojiDictionary) {
       setMeaning(emojiDictionary[emoji]);
+      setChosenEmoji(emoji);
       setChosenEmojiIndex(index);
     } else {
       setMeaning("Sorry, we couldn't recognise this emoji");
-      setChosenEmojiIndex(-1);
+      setChosenEmojiIndex(-2);
     }
   };
 
@@ -32,15 +35,20 @@ export default function App() {
     if (emoji) {
       getMeaningFromEmoji(emoji);
     } else {
-      alert("Please enter an emoji");
+      setChosenEmojiIndex(-1);
     }
   }
 
   return (
     <div className="App">
+      <img src={Emoji} className="image"></img>
       <div>
-        <img src="./Emoji.png"></img>
-        <h1>EmojiSearch</h1>
+        <h1>
+          EmojiSearch
+          <span>
+            <img src={search} className="search-image"></img>
+          </span>
+        </h1>
       </div>
       <h5>
         Recognising all the different emoji's becomes a difficult task.
@@ -50,10 +58,18 @@ export default function App() {
       <input
         type="text"
         onChange={inputHandler}
-        placeholder="Please enter your emoji..."
+        placeholder="Please enter any object emoji"
       ></input>
-      <div className="meaning-div">
-        {emojisInDB[chosenEmojiIndex]} {meaning}
+      <div>
+        {chosenEmojiIndex !== -1 ? (
+          <div className="meaning-div">
+            {chosenEmoji} {meaning}
+          </div>
+        ) : (
+          <div className="meaning-div">
+            Search for object emoji below or put it above
+          </div>
+        )}
       </div>
       <div>
         <br />

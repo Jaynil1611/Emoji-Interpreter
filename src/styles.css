@@ -1,21 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap');
+
 :root {
-  --background-color: #171717;
+  --background-color: #134E4A;
+  --hover-color: #18181B;
+  --background-color-click:#115E59;
+  --font-color:white;
 }
 
 .App {
-  font-family: sans-serif;
+  font-family: 'Merienda', cursive;
   text-align: center;
-  margin-top: 20%;
+  margin-top: 2%;
 }
 
 body {
   background-color: var(--background-color);
-  color: white;
+  color:var(--font-color); 
 }
 
 input {
-  width: 50%;
-  height: 50px;
+  font: inherit;
+  width: 30%;
+  height: 30px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+ input:focus {
+   outline: none;
+   border-radius: 0.5rem;
+   border-color: var(--hover-color);
+ }
+
+/* image */
+.image {
+  height: 100px;
+  width: 100px;
+}
+
+.search-image {
+  width: 40px;
+  height: 40px;
+  vertical-align: text-bottom;
+  padding: 0rem 0.5rem;
 }
 
 /* list */
@@ -24,21 +51,34 @@ input {
   padding-inline-start: 0px;
   margin-block-start: 1rem;
   margin-block-end: 1rem;
+  margin: auto;
+  max-width: 900px;
 }
 
 .list-item-inline {
   display: inline;
   padding: 0rem 2rem;
   cursor: pointer;
-  max-width: 300px;
   font-size: 1.5rem;
 }
 
 /* choosen emoji */
 .chosen-style {
   cursor: "pointer";
-  background-color: #f1f5f9;
+  background-color: var(--background-color-click);
   border-radius: "0.5rem";
 }
 
 /* div styling */
+.meaning-div {
+  margin: auto;
+  width: 30%;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: var(--background-color-click);
+  white-space: nowrap;
+  overflow: auto;
+}
