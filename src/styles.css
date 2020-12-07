@@ -1,0 +1,44 @@
+:root {
+  --background-color: #171717;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 20%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: white;
+}
+
+input {
+  width: 50%;
+  height: 50px;
+}
+
+/* list */
+.list-non-bullet {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 2rem;
+  cursor: pointer;
+  max-width: 300px;
+  font-size: 1.5rem;
+}
+
+/* choosen emoji */
+.chosen-style {
+  cursor: "pointer";
+  background-color: #f1f5f9;
+  border-radius: "0.5rem";
+}
+
+/* div styling */
