@@ -9,7 +9,7 @@ const emojisInDB = Object.keys(emojiDictionary);
 const chosenStyle = {
   cursor: "pointer",
   backgroundColor: "#0F766E",
-  borderRadius: "0.5rem"
+  borderRadius: "0.5rem",
 };
 
 export default function App() {
@@ -27,6 +27,7 @@ export default function App() {
     } else {
       setMeaning("Sorry, we couldn't recognise this emoji");
       setChosenEmojiIndex(-2);
+      setChosenEmoji(null);
     }
   };
 
@@ -34,7 +35,8 @@ export default function App() {
     let emoji = event.target.value;
     if (emoji) {
       getMeaningFromEmoji(emoji);
-    } else {
+    } 
+    else {
       setChosenEmojiIndex(-1);
     }
   }
