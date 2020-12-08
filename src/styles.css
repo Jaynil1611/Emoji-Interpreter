@@ -10,7 +10,6 @@
 .App {
   font-family: 'Merienda', cursive;
   text-align: center;
-  margin-top: 2%;
   font-size: large;
 }
 
@@ -21,10 +20,10 @@ body {
 
 input {
   font: inherit;
-  width: 30%;
-  height: 40px;
+  width: 40%;
+  height: 50px;
   border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
 }
 
 input:focus {
@@ -51,35 +50,43 @@ input:focus {
   padding: 1rem;
 }
 
-.list-non-bullet {
+.list-non-bullet-emoji {
   list-style-type: none;
   padding-inline-start: 0px;
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-  margin: auto;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  margin: 1rem auto;
   max-width: 900px;
 }
 
-.list-item-inline {
+.list-non-bullet-social {
+  list-style-type: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0rem;
+  margin-block-end: 0rem;
+  margin: auto;
+}
+
+.list-item-inline-emoji {
   display: inline;
   padding: 0rem 2rem;
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-.list-item-inline-1 {
+.list-item-inline-social {
   display: inline;
   padding: 0rem 1rem;
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-.list-item-inline-1 i {
+.list-item-inline-social i {
   padding-top: 2rem;
   color: var(--border-color);
 }
 
-.list-item-inline-1 i:hover {
+.list-item-inline-social i:hover {
   color: var(--font-color);
   transition: all 0.2s ease-in-out;
 }
@@ -93,14 +100,11 @@ input:focus {
 
 /* div styling */
 .meaning-div {
+  width: 40%;
   margin: auto;
-  width: 30%;
-  height: 30px;
-  margin-top: 20px;
+  font-size: x-large;
+  margin-top: 2rem;
   border-radius: 0.5rem;
-  padding: 1rem 1rem;
-  text-align: center;
+  padding: 1rem 2rem;
   background-color: var(--background-color-click);
-  white-space: nowrap;
-  overflow: auto;
 }

@@ -68,18 +68,18 @@ export default function App() {
           </div>
         ) : (
           <div className="meaning-div">
-            Search for object emoji below or put it above
+            Search for emoji below or enter one above
           </div>
         )}
       </div>
       <div className="display-emoji">
         <br />
         Here are the most used object emoji's used by users around the world
-        <ul className="list-non-bullet">
+        <ul className="list-non-bullet-emoji">
           {emojisInDB.map((emoji, index) => {
             return (
               <li
-                className="list-item-inline"
+                className="list-item-inline-emoji"
                 style={chosenEmojiIndex === index ? chosenStyle : null}
                 onClick={() => getMeaningFromEmoji(emoji, index)}
                 key={emoji}
@@ -89,8 +89,8 @@ export default function App() {
             );
           })}
         </ul>
-        <ul className="list-non-bullet">
-          <li className="list-item-inline-1">
+        <ul className="list-non-bullet-social">
+          <li className="list-item-inline-social">
             <a
               href="https://www.linkedin.com/in/jaynilgaglani/"
               className="link"
@@ -98,17 +98,17 @@ export default function App() {
               <i className="bx bxl-linkedin bx-sm"></i>
             </a>
           </li>
-          <li className="list-item-inline-1">
+          <li className="list-item-inline-social">
             <a href="https://twitter.com/JAYNIL1611" className="link">
               <i className="bx bxl-twitter bx-sm"></i>
             </a>
           </li>
-          <li className="list-item-inline-1">
+          <li className="list-item-inline-social">
             <a href="https://github.com/Jaynil1611" className="link">
               <i className="bx bxl-github bx-sm"></i>
             </a>
           </li>
-          <li className="list-item-inline-1">
+          <li className="list-item-inline-social">
             <a
               href="https://www.instagram.com/jaynil_gaglani/"
               className="link"
@@ -116,7 +116,7 @@ export default function App() {
               <i className="bx bxl-instagram bx-sm"></i>
             </a>
           </li>
-          <li className="list-item-inline-1">
+          <li className="list-item-inline-social">
             <a href="mailto:g.jaynil2401@gmail.com" className="link">
               <i className="bx bx-envelope bx-sm"></i>
             </a>
