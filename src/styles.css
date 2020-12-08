@@ -55,8 +55,8 @@ input:focus {
   padding-inline-start: 0px;
   margin-block-start: 0rem;
   margin-block-end: 0rem;
-  margin: 1rem auto;
-  max-width: 900px;
+  margin: 1.5rem auto;
+  max-width: 60%;
 }
 
 .list-non-bullet-social {
@@ -82,7 +82,6 @@ input:focus {
 }
 
 .list-item-inline-social i {
-  padding-top: 2rem;
   color: var(--border-color);
 }
 
@@ -102,7 +101,7 @@ input:focus {
 .meaning-div {
   width: 40%;
   margin: auto;
-  font-size: x-large;
+  font-size: 25px;
   margin-top: 2rem;
   border-radius: 0.5rem;
   padding: 1rem 2rem;

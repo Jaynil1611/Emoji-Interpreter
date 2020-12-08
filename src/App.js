@@ -73,7 +73,6 @@ export default function App() {
         )}
       </div>
       <div className="display-emoji">
-        <br />
         Here are the most used object emoji's used by users around the world
         <ul className="list-non-bullet-emoji">
           {emojisInDB.map((emoji, index) => {
