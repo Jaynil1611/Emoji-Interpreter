@@ -51,11 +51,11 @@ export default function App() {
           </span>
         </h1>
       </div>
-      <h5>
+      <p>
         Recognising all the different emoji's becomes a difficult task.
         EmojiSearch provides an easy interface to fins the find the meaning of
         emoji's instantly.
-      </h5>
+      </p>
       <input
         type="text"
         onChange={inputHandler}
